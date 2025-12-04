@@ -1,4 +1,5 @@
 FINAL PROJECT PROPOSAL
+
 Canteen Meal Budget & Queue Tracker
 Group Members:
 
