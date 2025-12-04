@@ -1,6 +1,7 @@
 FINAL PROJECT PROPOSAL
 
 Canteen Meal Budget & Queue Tracker
+
 Group Members:
 
    Lexyl Caye V. Polinar
