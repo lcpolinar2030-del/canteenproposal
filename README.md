@@ -1,200 +1,211 @@
+Canteen Meal Budget & Queue Tracker
+Group Members:
+
+Lexyl Caye V. Polinar
+
+Ethan Jhan Rosales
+
+Jade Sumaylo
+
 I. PROJECT OVERVIEW
 
-The Canteen Meal Budget & Queue Tracker is a simple digital tool designed to help students manage their daily food allowance and avoid long canteen lines. The system combines two useful features: a budget tracker, which helps students record and monitor their meal expenses, and a queue tracker, which shows whether the canteen line is short, normal, or long.
+The Canteen Meal Budget & Queue Tracker is a simple digital system created to help students manage their meal allowances and avoid long lines in the school canteen. The project includes two major features:
 
-This project is simple enough for student developers but meaningful because it directly addresses everyday problems students face, especially dormers who rely on the school canteen for all meals.
+A budget tracker that records and calculates student meal expenses
+
+A queue status indicator showing whether the canteen line is short, normal, or long
+
+This project is highly relatable, realistic, and useful for both dormers and regular students. It is also achievable within the required project timeline.
 
 II. BACKGROUND AND RATIONALE
 
-Students often struggle with two things:
+Students commonly experience two everyday problems:
 
-Overspending on meals due to lack of tracking.
+Overspending their daily or weekly meal allowance
 
-Long lines in the canteen, causing delays, stress, and wasted break time.
+Long lines in the school canteen that waste time
 
-Dormers are affected the most because they eat in the canteen daily and must manage their weekly allowance carefully. A system that shows how much they’ve spent and how long the line is can help students make better decisions about eating times and budgeting.
-
-Many existing apps online track expenses, and some systems monitor queues, but combining both into one student-friendly tool makes this project unique and practical.
+Dormers are especially affected because they rely heavily on the canteen for their meals. By combining a budget management tool with a queue tracking feature, students can save money, plan better, and avoid unnecessary waiting during break time.
 
 III. PROBLEM STATEMENT
 
-Students need a convenient way to:
+Students currently lack a simple system that helps them:
 
-Track how much they spend on meals
+Track their meal expenses
 
-Know their remaining daily or weekly budget
+See how much allowance they still have
 
-Avoid long canteen lines
+Know the best time to buy food without falling into long lines
 
-Plan their meals more efficiently
+Plan their daily meals wisely
 
-Without a tool, students end up overspending or wasting time in long queues.
+Because of this, many students overspend and waste valuable time waiting in queues.
 
 IV. TARGET USERS
 
-Dormers – need strict budget monitoring
+Dormers – need strict budgeting and meal planning
 
-Regular students – want to avoid long lines during lunch
+Regular students – want to avoid long lunch lines
 
-Canteen staff – can use queue data to adjust operations
+Canteen staff – can use line data to improve serving flow
 
-Teachers/admins – can see patterns in student meal schedules
+School administrators – can view usage trends for possible improvements
 
 V. PROJECT OBJECTIVES
 
-By the end of this project, the group aims to:
+The project aims to:
 
-Build a simple budget tracker for canteen meals.
+Develop a meal budget tracking system
 
-Allow users to input their daily or weekly allowance.
+Allow students to input daily or weekly allowance
 
-Record expenses and display the remaining balance.
+Display the remaining balance automatically
 
-Provide a quick and simple queue status indicator.
+Provide a queue status indicator (short, normal, long)
 
-Create a functional prototype for presentation.
+Produce a functional prototype
 
-Upload the complete project documentation to GitHub.
+Upload complete documentation and files to GitHub
 
 VI. SCOPE AND LIMITATIONS
-Scope
+Scope:
 
 The system will include:
 
 Budget input
 
-Expense recording
+Meal expense tracking
 
-Real-time balance display
+Remaining balance calculation
 
-Queue status (short, normal, long)
+Queue status indicator
 
-Simple interface for students
+Expense history display
 
-Limitations
+Limitations:
 
-Queue tracking is manual, updated by a student or canteen staff
+Queue status will be manually updated, not automated
 
-System is not fully automated with sensors
+Only applicable to the school canteen
 
-Only for the school canteen (not external restaurants)
+Does not function as a full mobile app yet
 
-Prototype level, not a full mobile app yet
+Prototype-level functionality only
 
 VII. PROJECT FEATURES
-1. Daily/Weekly Budget Input
+1. Budget Input
 
-Users can enter their allowance amount.
+Allows users to set their allowance for the day or week.
 
-2. Meal Expense Tracker
+2. Expense Recorder
 
-Records spending for breakfast, lunch, dinner, or snacks.
+Students enter the cost of meals (breakfast, lunch, dinner, snacks).
 
 3. Remaining Balance Display
 
-Automatically updates budget after every input.
+Automatically updates after each recorded meal expense.
 
-4. Queue Tracker
+4. Queue Status Indicator
 
-Shows the status of the canteen line:
+Shows one of the following:
 
-Green: Short
+Green – Short line
 
-Yellow: Normal
+Yellow – Normal line
 
-Red: Long
+Red – Long line
 
 5. Expense History Log
 
-A list of past expenses for review.
+Shows the list of previous entries for monitoring.
 
-VIII. INPUTS AND OUTPUTS
-Inputs:
+VIII. EXPECTED INPUTS & OUTPUTS
+Expected Inputs:
 
-Budget amount
+Daily or weekly budget amount
 
-Cost of each meal
+Cost of food purchased
 
-Queue status (manual selection)
+Queue status selection (short/normal/long)
 
-Outputs:
+Date and time of expense
 
-Remaining balance
+Expected Outputs:
 
-Summary of expenses
+Updated remaining balance
 
-Queue indicator
+Summary of recorded expenses
 
-History log
+Display of current queue status
+
+Daily/weekly expense report
+
+Full history log
 
 IX. METHODOLOGY
 
-Idea finalization – choose the topic and define problems
+Brainstorm and finalize topic
 
-Research and feature planning
+Conduct basic research
 
-Design simple UI wireframes
+Organize features and draft the project proposal
 
 Create GitHub repository
 
-Develop basic input/output system
+Develop a simple prototype
 
-Create the queue status feature
+Test system inputs and outputs
 
-Testing and revisions
+Polish documentation and clean final files
 
-Presentation and submission
+Prepare video presentation
 
 X. TOOLS AND TECHNOLOGIES
 
-GitHub for documentation
+GitHub (documentation, version control)
 
-Google Docs / Canva for presentation
+Canva or Google Slides (presentation)
 
-(Optional) Scratch, Python, HTML/CSS, or any language the teacher allows
+Python, Scratch, HTML/CSS (depending on teacher requirement)
 
-YouTube references for demo videos
+Google Sheets (optional prototype tool)
 
-Google Sheets for budget calculations (optional prototype)
+XI. EXPECTED OUTPUTS
 
-XI. EXPECTED OUTPUT
+The project will deliver:
 
-By the end of the project, the group will produce:
-
-A functional prototype of the budget and queue tracker
+A functioning prototype of the budget + queue tracker
 
 A complete GitHub repository containing:
 
-Proposal
+This project proposal
 
-System description
+Screenshots or UI mockups
 
-Screenshots/mockups
+Source code (if applicable)
 
-Code (if applicable)
+Documentation files
 
-A 3–5 minute video presentation showing:
-
-Problem
-
-Features
-
-Demonstration
-
-Conclusion
+A 3–5 minute recorded or live presentation
 
 XII. BENEFITS OF THE PROJECT
 
-Helps dormers avoid overspending
+Helps students save money
 
-Helps students avoid long lines
+Prevents overspending
 
-Saves time during breaks
+Reduces wasted time in canteen lines
 
-Promotes financial discipline
+Helps dormers plan meals better
 
-Provides students with a practical digital tool
+Promotes responsible budgeting habits
 
-XIII. CONCLUSION
+Improves daily convenience for students
 
-The Canteen Meal Budget & Queue Tracker is a simple yet impactful project that addresses real issues students face daily. With its practical features, easy user interface, and relatable purpose, the system can significantly improve students’ budgeting habits and meal planning. This project is achievable within the given timeline and aligns with the goals of the Computer Science curriculum.
+XIII. FINAL REFLECTION ENTRY
+
+What are you most confident about your draft?
+We are confident that our project idea is practical, relatable, and clearly explained. The proposal shows a real problem that students face and provides a simple, helpful solution. Our features are achievable and easy to demonstrate in a presentation.
+
+What would we like to improve?
+We would like to improve the look of the system by designing a cleaner and more modern interface. In the future, we hope to make the queue tracker fully automated and add more features such as reminders or weekly spending graphs. We also want to enhance the presentation to make it more engaging and professional.
