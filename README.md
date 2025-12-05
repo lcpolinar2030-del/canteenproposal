@@ -4,9 +4,9 @@
 
 **Group Members:**
 
-* Lexyl Caye V. Polinar
-* Ethan Jhan Rosales
-* Jade Sumaylo
+* Lexyl Caye V. Polinar, 8 - Daffodil
+* Ethan Jhan Rosales, 8 - Daffodil
+* Jade Sumaylo, 8 - Daffodil
 
 
 
