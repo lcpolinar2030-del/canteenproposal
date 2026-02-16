@@ -1,7 +1,5 @@
 # Canteen Meal Budget Tracker
 
-### Final Project for Computer Science
-
 **Group Members:**  
 - Lexyl Caye V. Polinar – 8 - Daffodil  
 - Ethan Jhan Rosales – 8 - Daffodil  
@@ -9,121 +7,135 @@
 
 ---
 
-## 📌 Project Description
+Project Description
 
-The **Canteen Meal Budget Tracker** is a digital tool that helps students record and monitor how much they spend in the school canteen. Users can enter meal expenses, view daily and weekly totals, and see how much allowance they have left. This helps students manage their money better and avoid overspending.
+The Canteen Meal Budget Tracker for Dormers is a simple web-based system designed to help dorm students manage their meal allowance. Many dormers receive a weekly or monthly budget, and sometimes they spend too much without tracking their expenses. This system helps students set a budget, record daily canteen expenses, and automatically calculate their remaining balance.
 
----
+The main goal of this project is to promote responsible spending and financial awareness among dorm students. The system is intentionally designed to be simple, clear, and easy to use, focusing only on budgeting and expense tracking.
 
-## 🎯 Problem Addressed
+System Features
 
-Many students overspend because they don’t keep track of what they spend in the canteen. This tool solves that by letting students enter meal expenses and instantly see their spending and remaining allowance. :contentReference[oaicite:1]{index=1}
+The system allows users to register and log in securely. After logging in, the dormer can:
 
----
+Set a weekly or monthly meal budget
 
-## 🧠 Why This Is Worth Solving
+Record daily meal expenses
 
-Students often run out of money before the week ends. By giving them a simple budgeting tool, we help them develop **money management skills** and avoid stress from unexpected overspending. :contentReference[oaicite:2]{index=2}
+View total expenses
 
----
+Check remaining balance automatically
 
-## 👥 Users and Their Needs
+See a simple financial summary on the dashboard
 
-**Primary Users:**  
-- Students who frequently purchase meals  
-- Dormers who depend on the canteen for meals
+Advanced features such as online payments and complex analytics were removed to keep the system focused and easy for dormers to understand.
 
-**User Needs:**  
-✔ Quickly record meal prices  
-✔ See total spending and remaining allowance  
-✔ Check past spending history easily  
-✔ View daily and weekly expense summaries :contentReference[oaicite:3]{index=3}
+Technologies Used
 
----
+The system uses:
 
-## ⭐ Key Features
+Python for backend logic
 
-| Feature | Description |
-|---------|-------------|
-| **Meal Entry** | Users can input the price of breakfast, lunch, dinner, or snacks |
-| **Daily Spending Calc** | Automatically sums daily expenses |
-| **Remaining Allowance** | Shows allowance left after each entry |
-| **Weekly Summary** | Displays total weekly expenses |
-| **Expense History** | Users can view their past entries | :contentReference[oaicite:4]{index=4}
+Flask as the web framework
 
----
+SQLite as the database
 
-## 📥 Inputs & Outputs
+HTML and CSS for frontend design
 
-**Inputs:**  
-✔ Expense amounts  
-✔ Date of each expense  
-✔ Weekly allowance amount
+Flask is used because it is lightweight and beginner-friendly, based on official Flask documentation. SQLite was selected because it is built into Python and does not require complex installation, making it suitable for student projects.
 
-**Outputs:**  
-✔ Total spent today  
-✔ Total spent this week  
-✔ Remaining allowance  
-✔ Expense log history | :contentReference[oaicite:5]{index=5}
+Sample Code Implementation (Python + Flask)
 
----
+Below are examples of the main system functions.
 
-## 🧩 Technologies Used
+1. Setting the Budget
 
-- **Python** – For program logic and calculations  
-- **GitHub** – For version control and collaboration  
-- (Optional) **Tkinter** – If UI is added  
-- **SQLite** (optional) – For storing expense history
+This function saves the dormer’s budget in the database.
 
----
+from flask import Flask, request, jsonify
+import sqlite3
 
-## 📂 Project Structure (Example)\
+app = Flask(__name__)
 
+@app.route('/set_budget', methods=['POST'])
+def set_budget():
+    data = request.json
+    budget = data['budget']
+    user_id = data['user_id']
 
-## 🛠 Implementation Methodology
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute("UPDATE users SET budget = ? WHERE id = ?", (budget, user_id))
+    conn.commit()
+    conn.close()
 
-### Core Features
-Each feature was built modularly. Functions handle:
-- Adding an expense  
-- Calculating daily/weekly totals  
-- Displaying summaries
+    return jsonify({"message": "Budget saved successfully"})
 
-### How It Works
-1. User enters meal cost  
-2. System stores the input  
-3. Calculates totals and remaining allowance  
-4. Displays results in a simple format
+Important: The budget is linked to the specific user to ensure data privacy.
 
----
+2. Adding an Expense
 
-## 🔁 Version Control & Commit Strategy
+This function updates the total expenses of the dormer.
 
-**Branches**
-- `main` – stable version
-- `dev` – development version
+@app.route('/add_expense', methods=['POST'])
+def add_expense():
+    data = request.json
+    amount = data['amount']
+    user_id = data['user_id']
 
-**Sample Commits**
-- `Initial project setup`
-- `Added meal entry feature`
-- `Created weekly summary logic`
-- `Updated documentation`
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute("UPDATE users SET total_expense = total_expense + ? WHERE id = ?", (amount, user_id))
+    conn.commit()
+    conn.close()
 
----
+    return jsonify({"message": "Expense added successfully"})
 
-## ⚖ Ethical Considerations
+Important: Each expense is automatically added to the total expense column in the database.
 
-This project reflects **responsible computing practices**:
-- No collection of personal sensitive info  
-- Proper credit to external tools and sources  
-- Accessible and simple UI design for student users  
-- Respect for intellectual property and open-source code | :contentReference[oaicite:6]{index=6}
+3. Calculating Remaining Balance
 
-The design follows principles from the **ACM Code of Ethics**, emphasizing fairness, privacy, and respect. | :contentReference[oaicite:7]{index=7}
+This function computes the remaining balance.
 
-## 🗂 How to Run (Example for Python)
+@app.route('/get_balance/<int:user_id>', methods=['GET'])
+def get_balance(user_id):
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT budget, total_expense FROM users WHERE id = ?", (user_id,))
+    row = cursor.fetchone()
+    conn.close()
 
-```bash
-git clone https://github.com/lcpolinar2030-del/canteenproposal
-cd canteenproposal
-python src/main.py
+    balance = row[0] - row[1]
 
+    return jsonify({"remaining_balance": balance})
+
+The formula used is:
+
+Remaining Balance = Budget − Total Expenses
+
+This calculation helps dormers see how much money they still have for meals.
+
+Backend and Frontend Communication
+
+The system uses HTTP requests to connect the frontend and backend.
+
+POST request – used when setting a budget or adding expenses
+
+GET request – used when retrieving the remaining balance
+
+The backend processes the request and sends data in JSON format. This is based on standard Flask routing and REST API principles.
+
+Key Design Decisions
+
+The system was designed to be:
+
+Simple and minimal
+
+Focused only on meal budgeting
+
+Easy to navigate
+
+Lightweight and efficient
+
+SQLite was chosen because it is suitable for small systems. Python and Flask were chosen because they are beginner-friendly and widely used in web development.
+
+The design is made specifically for dorm students who need quick and simple money tracking.
