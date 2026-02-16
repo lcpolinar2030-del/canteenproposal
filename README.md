@@ -1,9 +1,9 @@
 # Canteen Meal Budget Tracker
 
 **Group Members:**  
-- Lexyl Caye V. Polinar – 8 - Daffodil  
-- Ethan Jhan Rosales – 8 - Daffodil  
-- Jade Sumaylo – 8 - Daffodil
+Lexyl Caye V. Polinar – 8 - Daffodil  
+Ethan Jhan Rosales – 8 - Daffodil  
+Jade Sumaylo – 8 - Daffodil
 
 
 ---
