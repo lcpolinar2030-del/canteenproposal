@@ -7,18 +7,6 @@
 
 ---
 
-Here is your **final clean GitHub README version** with:
-
-* Proper **Markdown formatting**
-* Important parts in **bold**
-* Very **simple Python code**
-* Written clearly for **dormers**
-* All required documentation parts included
-
-You can copy and paste this directly into your `README.md`.
-
----
-
 # Canteen Meal Budget Tracker for Dormers
 
 ## Project About
