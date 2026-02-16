@@ -5,21 +5,70 @@
 - Ethan Jhan Rosales – 8 - Daffodil  
 - Jade Sumaylo – 8 - Daffodil
 
----
 
-# Canteen Meal Budget Tracker for Dormers
+---
 
 ## Project About
 
-The **Canteen Meal Budget Tracker for Dormers** is a simple web system that helps dorm students manage their meal allowance. Many dormers receive a **weekly or monthly budget**, but sometimes they overspend without realizing it.
+The **Canteen Meal Budget Tracker for Dormers** is a simple web application designed to help dorm students manage their meal allowance. Many dormers receive a **weekly or monthly budget**, but sometimes they overspend without tracking their daily expenses.
 
-This project allows dormers to **set a budget, record daily canteen expenses, and automatically see their remaining balance**. The main purpose of the system is to **help students become more responsible with their money while living in the dorm**.
+This system allows dormers to **set a budget, record daily canteen expenses, and automatically calculate their remaining balance**. The main goal of the project is to **help students become more financially responsible while living in the dorm**.
 
-The system is designed to be **simple, clear, and easy to use**. Only important budgeting features are included to avoid confusion.
+The system is intentionally simple so that it is easy to understand and use.
 
 ---
 
-# Updated Features
+# Purpose of the Project
+
+The purpose of this project is to:
+
+* Help dormers **monitor their daily meal spending**
+* Prevent students from **overspending their allowance**
+* Encourage **financial discipline and budgeting habits**
+* Provide a **simple and accessible budgeting tool**
+
+
+---
+
+# How It Benefits Dormers
+
+This system benefits dormers because:
+
+* They can clearly see how much money they have left.
+* They can control their spending before their allowance runs out.
+* They become more aware of their daily expenses.
+* It reduces financial stress during the week or month.
+
+
+---
+
+# What Was Updated
+
+The following improvements were made to the project:
+
+* The system was changed from a general canteen system to a **budget tracker specifically for dormers**.
+* The features were simplified to focus only on budgeting.
+* Complex features like online payments were removed.
+* The code structure was organized more clearly.
+* Ethical considerations were added in the documentation.
+* Simpler Python code was used for better understanding.
+* The README was improved with clearer explanations.
+
+---
+
+# Why These Updates Were Made
+
+These updates were made to:
+
+* Make the system more **focused and practical for dorm students**.
+* Keep the project **simple and beginner-friendly**.
+* Improve code readability.
+* Make the documentation clearer and more professional.
+* Ensure the project follows **ethical programming practices**.
+
+---
+
+# System Features
 
 The system includes:
 
@@ -27,39 +76,27 @@ The system includes:
 * **Set weekly or monthly meal budget**
 * **Add daily meal expenses**
 * **Automatic balance calculation**
-* **Simple dashboard summary**
+* **Simple dashboard display**
 
-Advanced features like online payment and complex charts were removed to keep the system **focused and beginner-friendly**.
 
 ---
 
-# File Structure
+# Technologies Used
 
-```
-/canteen-budget-tracker
-│── app.py
-│── database.db
-│── /templates
-│     ├── login.html
-│     ├── dashboard.html
-│── /static
-│     ├── style.css
-│── README.md
-```
-
-The system uses:
+The project uses:
 
 * **Python**
-* **Flask**
-* **SQLite**
+* **Flask (web framework)**
+* **SQLite (database)**
+* **HTML and CSS**
 
-Flask is used because it is simple and lightweight based on official Flask documentation.
+Flask was chosen because it is lightweight and simple for beginners. SQLite was selected because it is built into Python and does not require complex installation.
 
 ---
 
 # Simple Python Code (Flask Version)
 
-Below is a **very simple version** of the main features.
+Below are simplified examples of the main system functions.
 
 ---
 
@@ -84,7 +121,7 @@ def set_budget():
     return "Budget saved"
 ```
 
-This saves the dormer’s budget.
+This saves the dormer’s budget in the database.
 
 ---
 
@@ -104,7 +141,7 @@ def add_expense():
     return "Expense added"
 ```
 
-This adds the expense to the total spending.
+This adds the new meal expense to the total expenses.
 
 ---
 
@@ -131,36 +168,10 @@ The formula used is:
 
 # Detailed Methodology
 
-The system works using **Flask routes** to handle user requests. When a dormer sets a budget or adds an expense, the frontend sends data to the Flask server. The server updates the SQLite database. When checking the balance, the server retrieves stored data and calculates the remaining amount.
+The system works using Flask routes to process user requests. When a dormer sets a budget or adds an expense, the frontend sends the data to the Flask server. The server updates the SQLite database. When the dormer checks their balance, the system retrieves stored values and calculates the remaining amount.
 
-The backend and frontend communicate using **HTTP POST and GET requests**. Data is stored in a simple SQLite database for easy management.
+The backend and frontend communicate using **HTTP POST and GET requests**.
 
-The system focuses only on **meal budgeting for dormers**, avoiding unnecessary features. This keeps the application lightweight and easier to maintain.
+The design is minimal and focused only on meal budgeting to ensure clarity and usability.
 
----
-
-# Annotated GitHub Repository
-
-The repository is organized clearly into:
-
-* Python backend file (`app.py`)
-* Database file
-* Templates folder for HTML files
-* Static folder for CSS
-* README documentation
-
-## Commit Messages
-
-Commit messages are descriptive, such as:
-
-* Added budget feature
-* Implemented expense tracking
-* Fixed balance calculation
-* Updated README documentation
-
-## Branch Usage
-
-* `main` – stable version
-* `feature-budget` – budget function
-* `feature-expense` – expense function
 
